@@ -8,6 +8,8 @@
 import Foundation
 import SwiftData
 
+// MARK: - Rate
+
 //@Model
 class Rate: Decodable {
     enum CodingKeys: CodingKey {
@@ -38,6 +40,8 @@ class Rate: Decodable {
     }
 }
 
+// MARK: - Valute
+
 //@Model
 class Valute: Decodable {
     enum CodingKeys: CodingKey {
@@ -67,6 +71,7 @@ class Valute: Decodable {
 }
 
 
+// MARK: - ValuteDescription
 
 struct ValuteDescription: Decodable {
     enum CodingKeys: String, CodingKey {
@@ -79,6 +84,8 @@ struct ValuteDescription: Decodable {
     let code: String
     let name: String
 }
+
+// MARK: - Response
 
 struct Response: Decodable {
     enum ResponseKeys: String, CodingKey {
@@ -93,6 +100,8 @@ struct Response: Decodable {
         self.valutes = values.map { $0.value }
     }
 }
+
+// MARK: - ValuteDetail
 
 struct ValuteDetail: Decodable {
     enum CodingKeys: String, CodingKey {
